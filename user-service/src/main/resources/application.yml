@@ -1,0 +1,54 @@
+server:
+  port: 0 # This will cause the server to start on a random port
+
+spring:
+  application:
+    name: user-service
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:userservice
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+logging:
+  level:
+    com.example.userservice: DEBUG
+
+greeting:
+  message: Welcome to the Simple E-Commerce, This is User Service
+
+token:
+  access:
+    expiration_time: 300000 # 5분 # 1800000 # 30분
+  refresh:
+    expiration_time: 1800000  # 30분 # 86400000 # 1일
+  secret: MzM3NGMyYzdjNjc2OWQxYzViMDg3N2RkNzQwZjFiYTM4N2ZjNjQyZGFjZDc2NGUyZDNiZjNhMzJhOThmNmE1Nw
