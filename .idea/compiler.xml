@@ -10,6 +10,7 @@
         <module name="discoveryservice" />
         <module name="user-service" />
         <module name="apigateway-service" />
+        <module name="configuration-service" />
         <module name="catalog-service" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,7 @@
       <module name="apigateway-service" options="-parameters" />
       <module name="catalog-service" options="-parameters" />
       <module name="configuation" options="-parameters" />
+      <module name="configuration-service" options="-parameters" />
       <module name="discoveryservice" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="userOrder-service" options="-parameters" />

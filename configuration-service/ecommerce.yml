@@ -1,0 +1,9 @@
+token:
+  access:
+    expiration_time: 300000 # 5분 # 1800000 # 30분
+  refresh:
+    expiration_time: 1800000  # 30분 # 86400000 # 1일
+  secret: MzM3NGMyYzdjNjc2OWQxYzViMDg3N2RkNzQwZjFiYTM4N2ZjNjQyZGFjZDc2NGUyZDNiZjNhMzJhOThmNmE1Nw
+
+gateway:
+  ip: 127.0.0.1
