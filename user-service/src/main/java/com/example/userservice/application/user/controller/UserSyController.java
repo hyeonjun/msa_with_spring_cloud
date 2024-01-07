@@ -44,19 +44,4 @@ public class UserSyController {
     return new ResponseEntity<>(vo, HttpStatus.OK);
   }
 
-  @GetMapping("/health-check")
-  public String healthCheck(HttpServletRequest request) {
-    return String.format("It's Working in User Service on Port %s", request.getServerPort());
-  }
-
-  @GetMapping("/welcome1")
-  public String welcome1() {
-    return env.getProperty("greeting.message");
-  }
-
-  @GetMapping("/welcome2")
-  public String welcome2() {
-    return welcomeMessage;
-  }
-
 }
