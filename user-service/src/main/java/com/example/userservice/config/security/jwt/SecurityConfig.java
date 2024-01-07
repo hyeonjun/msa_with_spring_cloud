@@ -2,6 +2,7 @@ package com.example.userservice.config.security.jwt;
 
 import static com.example.userservice.application.user.entity.code.Role.SYSTEM;
 import static com.example.userservice.application.user.entity.code.Role.USER;
+import static com.example.userservice.util.ApplicationStaticResource.ACTUATOR_ALL_URL;
 import static com.example.userservice.util.ApplicationStaticResource.AUTHORITY_AUTH_URL;
 import static com.example.userservice.util.ApplicationStaticResource.AUTHORITY_SYSTEM_URL;
 import static com.example.userservice.util.ApplicationStaticResource.AUTHORITY_USER_URL;
@@ -41,7 +42,7 @@ public class SecurityConfig {
     return web -> web
       .ignoring().antMatchers("/profile", "/manage/health", "/h2-console/**",
         "/v3/api-docs", "/swagger-ui/**", "/swagger-resources/**", "/swagger-ui.html",
-        "/webjars/**", "/swagger/**");
+        "/webjars/**", "/swagger/**", ACTUATOR_ALL_URL);
   }
 
   @Bean

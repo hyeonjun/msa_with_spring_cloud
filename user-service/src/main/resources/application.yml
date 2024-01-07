@@ -1,6 +1,12 @@
 server:
   port: 0 # This will cause the server to start on a random port
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
+
 spring:
   application:
     name: user-service
