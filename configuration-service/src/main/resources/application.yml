@@ -8,4 +8,5 @@ spring:
     config:
       server:
         git:
+          # uri: /Users/fin2b/Desktop/personal/spring-cloud/lab1
           uri: https://github.com/hyeonjun/msa_with_spring_cloud
